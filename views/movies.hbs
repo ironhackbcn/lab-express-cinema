@@ -2,6 +2,14 @@
   <article class="movies__container">
     <h1 class="movies__title">Ironhack Cinema</h1>
     <h2 class="movies__subtitle">Clickon the movies to check the showtimes!</h2>
-    <a class="btn" href="">See more</a>
   </article>
+  <ul>
+    {{#each movies}}
+    <li class="movies__card">
+      <p>{{this.title}}</p>
+      <img src="{{this.image}}" alt="{{this.title}}">
+      <a class="btn" href="/movies/{{this._id}}">See more</a>
+    </li>
+    {{/each}}
+  </ul>
 </section>
