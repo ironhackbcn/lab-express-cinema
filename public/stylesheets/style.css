@@ -1,8 +1,156 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root{
+  --white: #ffffff;
+  --black: #212121;
+  --color-primary: #1976D2;
+  --color-secondary: #555;
+
+  --desktop-width: 1024px;
+}
+html {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+.link{
+  display: inline-block;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn, .btn--dark{
+  display: inline-block;
+  color: var(--black);
+  background: var(--white);
+  padding: 0.75rem 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn--dark{
+  color: var(--white);
+  background: var(--black);
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* HOME COMPONENT */
+
+.home{
+  display: flex;
+  justify-content: center;
+  background-image: url('/images/cinema.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-basis: var(--desktop-width);
+}
+
+.home__title{
+  color: var(--white);
+  font-size: 3rem;
+}
+
+/* MOVIES COMPONENT */
+
+.movies{
+  margin: 0 auto;
+  max-width: var(--desktop-width);
+}
+
+.movies__cards{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movies__card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+}
+
+.movies__title{
+  padding-bottom: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+/* MOVIE COMPONENT */
+
+.movie{
+  margin: 2rem auto;
+  max-width: var(--desktop-width);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.movie__content{
+  width: 800px;
+  padding-left: 2rem;
+}
+
+.movie__title{
+  margin-top: 0;
+}
+
+.movie__director{
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
+
+.movie__description{
+  padding: 1rem 0;
+  color: var(--color-secondary);
+}
+
+.movie__showtime{
+  display: inline-block;
+  margin: 0 0.5rem;
 }
