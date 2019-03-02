@@ -7,6 +7,10 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index');
+// const moviesRouter = require('./routes/movies');
+
+const data = require('./bin/seeds');
+const Movie = require('./models/Movie');
 
 const app = express();
 
@@ -15,6 +19,14 @@ mongoose.connect('mongodb://localhost/cinema', {
   useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
 });
+
+Movie.insertMany(data)
+  .then(result => {
+    console.log(result);
+    mongoose.connection.close();
+  })
+  .catch(err => console.log(err));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -26,6 +38,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template
