@@ -8,16 +8,16 @@ a {
   color: #00B7FF;
 }
 
-html{
-  background-image: url("/images/cinema.jpg");
-  background-size: cover;
-}
 
 .index{
+  background-image: url("/images/cinema.jpg");
+  background-size: cover;
+  padding-bottom: 250px; 
   display: grid;
   justify-content: flex-end;
   padding-top: 50px;
   padding-right: 200px;
+  bottom: 0;
   
 }
 .index h1{
@@ -38,9 +38,8 @@ html{
 }
 
 
-.movies{
-  width: 100%;
-  background-color: white;
+.movies, .movie{
+
   margin: 0;
   padding: 50px;
 
@@ -54,6 +53,7 @@ ul{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
 }
 
@@ -81,4 +81,25 @@ ul{
   width: 100px;
   text-align: center;
   box-shadow: 0px 5px 13px -4px rgba(17, 17, 17, 0.64);
+}
+
+
+.movie{
+  display: flex;
+  justify-content: center;
+}
+
+.button{
+  margin: 50px;
+}
+.movie-section{
+  display: flex;
+  width: 60%;
+}
+.movie-text{
+  padding: 20px;
+}
+
+.movie .back-button{
+  margin: 20px;
 }
