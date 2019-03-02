@@ -6,4 +6,9 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' });
 });
 
+// Cambiar para el enlace a las peliculas
+router.get('/movies', (req, res, next) => {
+  res.render('index', { title: 'Express' });
+});
+
 module.exports = router;
