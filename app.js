@@ -5,8 +5,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-
+const data = require('./bin/seeds.js');
+const Schema = mongoose.Schema;
 const indexRouter = require('./routes/index');
+
+const Movie = require('./models/Movie');
 
 const app = express();
 
@@ -26,6 +29,24 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+app.get('/movies', async (req, res, next) => {
+  try {
+    const moviesArray = await Movie.find();
+    res.render('movies', { movies: moviesArray });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// --- INSERTAR PELIS ---
+// Movie.insertMany(data)
+//  .then(result => {
+//    // console.log(result);
+//    mongoose.connection.close();
+//  })
+//  .catch(err => console.log(err));
+
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template
