@@ -1,15 +1,14 @@
 <section class="movies">
-  <article class="movies__container">
-    <h1 class="movies__title">Ironhack Cinema</h1>
-    <h2 class="movies__subtitle">Clickon the movies to check the showtimes!</h2>
-  </article>
-  <ul>
-    {{#each movies}}
-    <li class="movies__card">
-      <p>{{this.title}}</p>
-      <img src="{{this.image}}" alt="{{this.title}}">
-      <a class="btn" href="/movies/{{this._id}}">See more</a>
-    </li>
+  <h1>Ironhack Cinema</h1>
+  <h2>Clickon the movies to check the showtimes!</h2>
+   <a class="link" href="/">Go Back</a>
+  <ul class="movies__cards">
+    {{#each movies}}  
+      <li class="movies__card">
+        <p class="movies__title">{{this.title}}</p>
+        <img src="{{this.image}}" alt="{{this.title}}">
+        <a class="link" href="/movies/{{this._id}}">See more</a>
+      </li>
     {{/each}}
   </ul>
 </section>
