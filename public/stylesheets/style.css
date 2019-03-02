@@ -28,3 +28,21 @@ section h1 {
   width: 300px;
   margin: 50px 250px;
 }
+
+.container-row {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 120px;
+}
+
+.film-div {
+  text-align: center;
+  margin: 40px 80px;
+}
+
+.film-div li {
+  padding: 20px 0;
+  font-weight: bold;
+}
+
