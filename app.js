@@ -26,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template
