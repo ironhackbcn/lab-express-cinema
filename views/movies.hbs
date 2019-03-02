@@ -1,0 +1,9 @@
+<ul class="container-row">
+  {{#each movies}}
+  <div class="film-div">
+    <img src={{image}} />
+    <li>{{title}}</li>
+    <a href="/movies/{{_id}}">See More</a>
+  </div>
+  {{/each}}
+</ul>

@@ -1,8 +1,58 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+section h1 {
+  color: rgb(224, 219, 219);
+  font-size: 64px;
 }
 
-a {
-  color: #00B7FF;
+.link-button {
+  text-decoration: none;
+  padding: 14px 23px;
+  border-radius: 20px;
+  background-color: rgb(224, 219, 219);
+  color: rgb(89, 171, 238);
+  box-shadow: 0.5px 0.5px 3px black;
+}
+
+.start-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.intro-text {
+  width: 300px;
+  margin: 50px 250px;
+}
+
+.container-row {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 120px;
+}
+
+.film-div {
+  text-align: center;
+  margin: 40px 80px;
+}
+
+.film-div li {
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.details-section article {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.details-image {
+  margin-right: 30px;
 }
