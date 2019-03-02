@@ -1,8 +1,84 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
+  color: #111;
+  margin: 0;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  
+  background-color:#F7F9F9;
+}
+
+li{
+  list-style: none;
 }
 
 a {
+  text-decoration: none;
   color: #00B7FF;
 }
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+p {
+  margin: 0;
+}
+
+
+
+/* ---- layout ---- */
+
+
+@media screen and (max-width: 768px ), screen and ( max-height: 400px ) {
+  body{
+    font-size: 12px;
+    line-height: 147%;
+  }
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* ---- components ---- */
+
+.button {
+  width: auto;
+  font-size: 1.5em;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 1vh 3vh;
+  background-color: #2081C3;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button:hover {
+  background-color:rgb(21, 91, 138);
+}
+
+
+/* ---- section ---- */
