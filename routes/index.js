@@ -8,8 +8,23 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-router.get('/movies', (req, res, next) => {
-  res.render('movies');
+router.get('/movies', async (req, res, next) => {
+  try {
+    const arrayMovies = await Movie.find();
+    res.render('movies', { allMovies: arrayMovies }); // kaka yop elijo ponerl el nombre que quiera
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get('/movies/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const arrayMovie = await Movie.findById(id);
+    res.render('detail', { theMovie: arrayMovie });
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;
