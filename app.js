@@ -6,6 +6,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+const data = require('./bin/seeds.js');
+const Movie = require('./models/Movie');
+
 const indexRouter = require('./routes/index');
 
 const app = express();
@@ -15,6 +18,15 @@ mongoose.connect('mongodb://localhost/cinema', {
   useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
 });
+
+// creamos la base de datos
+/* Movie.insertMany(data)
+  .then(result => {
+    console.log(result);
+    mongoose.connection.close();
+  })
+  .catch(error => console.error(error)); */
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
