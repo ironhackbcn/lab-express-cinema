@@ -1,8 +1,138 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1 {
+  
+}
+
+h2 {
+}
+
+h3 {
+}
+
+p {
+  margin: 0;
+}
+
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+/* ---- layout ---- */
+
+.bg {
+  background-image: url("../images/cinema.jpg");
+  width: 100vh;
+  height: 100vh;
+}
+
+#site-header {
+  padding: 30px 0;
+  color: white;
+  background: #111;
+}
+
+#site-footer {
+  color: white;
+  padding: 60px 0;
+  background: #111;
+}
+
+#site-main {
+  margin-bottom: 60px;
+}
+
+.container {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.container h1{
+  color: white;
+  font-size: 3rem;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+/* ---- components ---- */
+
+.button {
+  width: 100%;
+  background-color: blue;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.button-alt {
+  color: blue;
+  background-color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+.list-movies {
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.list-movies h1 {
+  font-size: 1rem;
+}
+
+.movies-items {
+  text-align: center;
+}
+
+.detail-movies div {
+  margin: 20px;
+}
+
+/* ---- section ---- */
+
+section.testimonials {
+}
+
+section.testimonials .button {
+  margin-bottom: 10px;
 }

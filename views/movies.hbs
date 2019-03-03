@@ -1,0 +1,9 @@
+<div class="flex list-movies">
+  {{#each movies}}
+  <div class="movies-items">
+    <img src="{{this.image}}">
+    <h1>{{this.title}}</h1>
+    <a href="/movies/{{this._id}}">See more</a>
+  </div>
+  {{/each}}
+</div>

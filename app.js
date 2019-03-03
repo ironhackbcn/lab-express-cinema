@@ -5,6 +5,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const Movies = require('./models/Movie');
+const data = require('./bin/seeds');
 
 const indexRouter = require('./routes/index');
 
@@ -15,6 +17,17 @@ mongoose.connect('mongodb://localhost/cinema', {
   useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
 });
+
+if(Movies.count()<8){
+  Movies.insertMany(data)
+ .then(result => {
+    console.log('done insert');
+ })
+ .catch(error => {
+   console.log(error);
+ })
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
