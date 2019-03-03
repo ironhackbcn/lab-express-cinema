@@ -67,3 +67,20 @@ a {
 .movie-text{
   text-align: center;
 }
+.container-detail{
+  display: flex;
+  margin-top:5%;
+  margin-bottom: 5%;
+  margin-left:15%;
+  padding-bottom:10px;
+  padding-top: 10px;
+  width: 70%;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+.detail-text{
+  margin-left: 5%;
+}
+.detail-text li{
+  list-style: disc;
+}
