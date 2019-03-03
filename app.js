@@ -16,9 +16,9 @@ mongoose.connect('mongodb://localhost/cinema', {
   reconnectTries: Number.MAX_VALUE
 });
 
+/*
 const movies = require('./bin/seeds');
 const Movie = require('./models/Movies');
-/*
 Movie.insertMany(movies)
   .then(result => {
     console.log(result);
