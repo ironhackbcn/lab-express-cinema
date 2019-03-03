@@ -11,6 +11,13 @@ mongoose.connect('mongodb://localhost/ironhack-cinema', {
   reconnectTries: Number.MAX_VALUE
 });
 
+// Movie.insertMany(data)
+//   .then(result => {
+//     console.log(result);
+//     mongoose.connection.close();
+//   })
+//   .catch(err => console.log(err));
+
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index');

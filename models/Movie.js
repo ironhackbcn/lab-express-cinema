@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const movieSchema = new Schema({
-  name: {
+  title: {
     type: String,
     required: true
   },
@@ -24,7 +24,7 @@ const movieSchema = new Schema({
     type: String,
     required: true
   },
-  showtime: {
+  showtimes: {
     type: Array,
     required: true
   }

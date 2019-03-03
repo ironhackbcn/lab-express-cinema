@@ -1,5 +1,6 @@
 <div class="button"><a href="/movies" class="back-button">Go back</a></div>
 <section class="movie">
+
   <div class="movie-section">
     <div>
       <img src="{{movie.image}}" alt="{{movie.title}}">
@@ -10,7 +11,7 @@
         {{movie.title}}
       </h1>
 
-    <h3>
+      <h3>
         Director: {{movie.director}}
       </h3>
       <ul>
@@ -23,10 +24,7 @@
       <p>{{movie.description}}</p>
       {{#each movie.showtimes}}
       <span>{{this}} | </span>
-
       {{/each}}
     </div>
-    
   </div>
-
 </section>
