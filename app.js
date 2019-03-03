@@ -51,11 +51,11 @@ app.get('/movie/:id', async (req, res, next) => {
 
 // --- INSERTAR PELIS ---
 // Movie.insertMany(data)
-//  .then(result => {
-//    // console.log(result);
-//    mongoose.connection.close();
-//  })
-//  .catch(err => console.log(err));
+//   .then(result => {
+//     // console.log(result);
+//     mongoose.connection.close();
+//   })
+//   .catch(err => console.log(err));
 
 // -- 404 and error handler
 
