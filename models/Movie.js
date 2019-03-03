@@ -9,21 +9,24 @@ const movieSchema = new Schema({
     required: true
   },
   director: {
-    type: String
+    type: String,
+    required: true
   },
   stars: {
     type: Array,
-    minlength: 3,
-    maxlength: 3
+    required: true
   },
   image: {
-    type: String
+    type: String,
+    required: true
   },
   description: {
-    type: String
+    type: String,
+    required: true
   },
   showtime: {
-    type: Array
+    type: Array,
+    required: true
   }
 });
 
