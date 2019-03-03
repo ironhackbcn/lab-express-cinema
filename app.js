@@ -6,15 +6,31 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+// carpetas requerias
+const data = require('./bin/seeds');
+const Movie = require('./models/Movie');
+
 const indexRouter = require('./routes/index');
 
 const app = express();
 
+// conectar a mongo
 mongoose.connect('mongodb://localhost/cinema', {
   keepAlive: true,
   useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
 });
+
+// Instertar pelis
+// Movie.insertMany(data)
+//   .then(result => {
+//     console.log(result);
+//     mongoose.connection.close();
+//   })
+//   .catch(err => {
+//     next(err);
+//   });
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
