@@ -82,3 +82,22 @@ h3 {
 .titleMovies {
     margin: 50px;
 }
+
+.movieDetails {
+    display: flex;
+    flex-direction: row;
+}
+
+.infoMovie {
+    margin: 30px;
+    width: 46%;
+}
+
+.photoMovie {
+    margin: 72px 0 0 63px;
+}
+
+.infoMovie a {
+    text-decoration: none;
+    color: #00B7FF;
+}
