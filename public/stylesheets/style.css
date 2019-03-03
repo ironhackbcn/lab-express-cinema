@@ -1,8 +1,142 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+/* ---- reset ---- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	vertical-align: baseline;
 }
 
-a {
-  color: #00B7FF;
+.index-container {
+  background-image: url("/images/cinema.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
 }
+.index-container h1{
+  font-size: 7em;
+  color: white;
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: end;
+}
+
+.index-container div{
+  grid-area: 2 / 2 / 3 / 3;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-container a{
+  font-size: 1.3em;
+  color: #679DAD;
+  text-decoration: none;
+}
+/*-------------CSS Novies.hbs------------*/
+.movies-container {
+  margin: 30px;
+}
+.movies-container h1{
+  margin: 30px 0px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.movies-container p{
+  font-weight: 700;
+}
+
+.movies-list-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  list-style:none;
+  align-items: center;
+  justify-items: center;
+}
+.movies-list-container li {
+  padding: 10px;
+  text-align: center;
+}
+.movies-list-container img {
+  padding: 10px;
+  text-align: center;
+}
+.movies-list-container p {
+  padding: 10px;
+  text-align: center;
+}
+.movies-list-container a {
+  padding: 10px;
+  text-align: center;
+
+}/*--------------------------CSS Detail.hbs---------------*/
+.detail-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 50%;
+  padding-top: 100px;
+}
+
+.detail-container img {
+  justify-self: center;
+}
+
+.detail-info h1{
+  font-size: 2.1em;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.detail-info h2{
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail-info h3{
+  font-size: 1.2m;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.detail-info ul {
+  margin-bottom: 10px;
+  margin-left: 17px;
+}
+.detail-info p {
+  margin-bottom: 10px;
+}
+  
