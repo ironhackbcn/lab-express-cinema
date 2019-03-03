@@ -1,8 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.index main {
+  margin: 0;
+  padding: 0;
+  background-image: "/images/cinema.jpg";
+  background-size: cover;
+}
+
+.index button {
+  background-color: #fafafa;
+  color: #111;
 }
