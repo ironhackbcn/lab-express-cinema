@@ -40,3 +40,30 @@ a {
   border-radius: 35px;
 }
   
+
+
+.div-movies{
+     /* padding: 1%; */
+     margin: 3% 7%;
+     /* border: 1px solid red; */
+}
+
+.div-movies h2{
+  font-weight: 900;
+}
+
+.div-movies p{
+  font-weight: 500;
+}
+
+.div-movies{
+  display: flex;
+  /*flex-direction: column;*/
+  align-content: center;
+}
+
+.div-images{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

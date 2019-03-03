@@ -33,21 +33,3 @@ const movieSchema = new Schema({
 const Movie = mongoose.model('Movie', movieSchema);
 
 module.exports = Movie;
-
-/* const tortillaSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  special: {
-    type: String
-  },
-  size: {
-    type: String,
-    enum: ['small', 'medium', 'big']
-  }
-});
-
-const Tortilla = mongoose.model('Tortilla', tortillaSchema);
-
-module.exports = Tortilla; */

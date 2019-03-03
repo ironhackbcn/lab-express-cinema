@@ -16,6 +16,18 @@ mongoose.connect('mongodb://localhost/cinema', {
   reconnectTries: Number.MAX_VALUE
 });
 
+const movies = require('./bin/seeds');
+const Movie = require('./models/Movies');
+/*
+Movie.insertMany(movies)
+  .then(result => {
+    console.log(result);
+    mongoose.connection.close();
+  })
+  .catch(error => {
+    console.log(error);
+  });
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
