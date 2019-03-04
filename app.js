@@ -5,10 +5,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const data = require('./bin/seeds');
-const Movie = require('./models/Movie');
 
 const indexRouter = require('./routes/index');
+const movieRouter = require('./routes/mvoies');
 
 const app = express();
 
@@ -25,8 +24,7 @@ mongoose.connect('mongodb://localhost/cinema', {
 //   })
 //   .catch(err => {
 //     next(err)
-//   }) 
-  
+//   })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,6 +37,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/movies', movieRouter);
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template

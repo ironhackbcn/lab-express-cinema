@@ -1,3 +1,5 @@
+'use strict';
+
 const movies = [
   {
     title: 'A Wrinkle in Time',
