@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+<img src="{{image}}" alt="{{title}}">
+<p>director: {{director}}</p>
+<ul>
+  {{#each stars}}
+{{!-- <p>stars: {{stars}}</p> --}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+<p>Description: {{description}}</p>-
+
+<ul>
+  {{#each showtimes}}
+    <li>{{this}}</li>
+  {{/each}}  
+</ul>
+
+<a href="/">go back</a>

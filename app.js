@@ -15,6 +15,19 @@ mongoose.connect('mongodb://localhost/cinema', {
   useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
 });
+/* // insert Movies in movies seeds database
+const movies = require('./bin/seeds');
+const Movies = require('./models/Movies');
+
+Movies.insertMany(movies)
+  .then(result => {
+    console.log(result);
+    mongoose.connection.close();
+  })
+  .catch(error => {
+    console.log(error);
+  });
+ */
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -26,6 +39,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template
