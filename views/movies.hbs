@@ -1,0 +1,16 @@
+<h1 id="movies-h1">Movies</h1>
+
+<div class="movies-back-wrap">
+    <a href="/">Back</a>
+    <hr>
+</div>
+<div class="movies-container">
+    {{#each movies}}
+    <div class="movie">
+        <img src="{{image}}" alt="{{name}}">
+        <p>{{this.title}}</p>
+        <a href="/movies/{{id}}">See more</a>
+    </div>
+    {{/each}}
+
+</div>

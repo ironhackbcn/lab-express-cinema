@@ -1,8 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  font: 18px "Lato", sans-serif;
+}
+
+.body-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  
+  background: url("/images/cinema.jpg");
+  background-size: cover;
+  color: #ecf0f1;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.body-wrap-container {
+  width: 500px;
+  margin: 20px 50px;
+}
+
+.body-wrap-container h1 {
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.body-button {
+  background-color: #ecf0f1;
+  padding: 10px 25px;
+  border-radius: 20px;
+}
+
+.body-wrap-container p {
+  margin-bottom: 50px;
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* MOVIES------------- */
+
+.movies-back-wrap {
+  /* border: 1px solid red; */
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin: 0 auto 50px;
+  width: 960px;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 30%;
+  height: 350px;
+  /* border: 1px solid black; */
+  margin: 30px 0;
+}
+
+.movie img {
+  width: 200px;
+  box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.83);
+}
+
+.movie p {
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  padding: 10px 4px;
+}
+
+.movie a {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#movies-h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* MOVIE----------------- */
+
+.movie-container {
+  display: flex;
+
+  box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.83);
+  width: 800px;
+  margin: 60px auto;
+  font-size: 16px;
+}
+
+.movie-wrap-img {
+  padding: 15px;
+}
+
+.movie-wrap-info {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px;
+}
+
+.movie-wrap-info h1,h4,p {
+  margin: 10px 0;
+}
+
+.movie-wrap-info ul {
+  padding: 0 14px 10px;
+  margin: 0;
+}
+
+.showtimes:not(:last-child):after {
+  content: " |";
 }
