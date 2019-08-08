@@ -1,17 +1,14 @@
 const mongoose = require('mongoose');
 
-const {
-  Schema,
-} = mongoose;
+const { Schema } = mongoose;
 
 const movieSchema = new Schema({
   title: String,
   director: String,
-  stars: Array,
+  stars: [],
   image: String,
   description: String,
-  // eslint-disable-next-line comma-dangle
-  showtimes: Array
+  showtimes: [],
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
