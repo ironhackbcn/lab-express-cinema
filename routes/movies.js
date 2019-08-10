@@ -1,9 +1,11 @@
 const express = require("express");
+const Movie = require("../models/Movie");
+
 const router = express.Router();
 
-/* GET home page. */
+/* GET movies page. */
 router.get("/", (req, res, next) => {
-  res.render("index", { title: "Cinema Ironhack" });
+  res.render("movies", { title: "Cinema Ironhack" });
 });
 
 module.exports = router;
