@@ -6,10 +6,10 @@ const movieSchema = new Schema(
   {
     title: String,
     director: String,
-    stars: Array,
+    stars: [],
     image: String,
     description: String,
-    showtimes: Array
+    showtimes: []
   },
   {
     timestamps: {

@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const Movie = require("../models/Movie");
 
-mongoose.connect("mongodb://localhost/moviesApp", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/movies", { useNewUrlParser: true });
 
-const movies = [
+var movies = [
   {
     title: "A Wrinkle in Time",
     director: "Ava DuVernay",
@@ -86,9 +86,9 @@ const movies = [
   }
 ];
 
-Movie.insertMany(movies)
-  .then(() => {
-    console.log("inserted movies");
+Movie.create(movies)
+  .then(movie => {
+    console.log("inserted movie ", movie);
     mongoose.connection.close();
   })
   .catch(err => {
