@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/movies',moviesRouter);
+app.use('/movies', moviesRouter);
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template

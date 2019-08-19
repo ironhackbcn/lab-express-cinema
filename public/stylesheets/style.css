@@ -57,3 +57,17 @@ a:visited {
 h1 {
   color: black;
 }
+
+.wrap-movie{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+}
+
+.moviecard{
+  width:29%;
+}
+
+.detail-container{
+  width:100%;
+}
