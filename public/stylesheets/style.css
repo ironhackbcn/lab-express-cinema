@@ -1,32 +1,59 @@
 body {
-  margin: 0;
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-.container{
-  width:100%;
-  height:100vh;
+#imageWrapper {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/cinema.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: flex-end;
  
-  margin:0 auto;
-}
-.wrapper-popcorn-image{
-  width:100%;
-  height:100%;
-  background-image: url('../images/cinema.jpg');
-  background-size: cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  display:flex;
-  flex-direction:column;
 }
 
-h1-wrapper{
-  width:33%;
+#titled {
+  width: 33%;
+  display: block;
+  margin-right:10%;
+ 
 }
-h1{
-  color:#ffffff;
+
+#titled h1 {
+  font-size: 8em;
+  color: white;
+  margin: 0;
+}
+
+#button-check {
+  display: inline-block;
+  width: 19%;
+  height: 4em;
+  background: whitesmoke;
+  border-radius: 25px;
+  margin: 10% 15%;
+}
+
+#wrapper-text {
+  display: block;
+  width: 100%;
+  padding: 0 auto;
+  margin-bottom: 10%;
+}
+
+a,
+a:visited {
+  font-size: 1.6em;
+  display: block;
+  color: #00b7ff;
+  margin: 7% 12%;
+  text-decoration: none;
+}
+
+h1 {
+  color: black;
 }
