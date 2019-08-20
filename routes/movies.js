@@ -22,13 +22,13 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.get('/id?=id', (req, res, next) => {
-  const { id } = req.query;
-  console.log (id)
+router.get('/:id', (req, res, next) => {
+  const { id } = req.params;
+  console.log('hello My Friend');
+  console.log(id);
   Movie.findById({ _id: id })
     .then((theMovie) => {
-      console.log ('The movie is '+theMovie)
-      res.render('details', { theMovie });
+      res.render('details', theMovie);
     })
     .catch((error) => {
       console.log(`Error while getting the books from the DB:, ${error}`);
