@@ -7,13 +7,14 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   Movie.find({})
     .then((movie) => {
-      console.log(movie.title);
+
       res.render("movies", { movie });
     })
     .catch((err) => console.log(err));
 });
 
-router.get("/:movieId", (req, res, next) => {
+/* GET movie detail */
+router.get("/:movieId", (req, res) => {
   const { movieId } = req.params;
 
   Movie.findById(movieId)
@@ -21,7 +22,7 @@ router.get("/:movieId", (req, res, next) => {
       console.log("Found this movie: ", movie);
       res.render("movieDetail", { movie });
     })
-    .catch(next);
+    .catch((err) => console.log(err));
 });
 
 module.exports = router;
