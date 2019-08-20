@@ -12,7 +12,6 @@ const mongoose = require('mongoose');
 const Movie = require('../models/Movie.js');
 
 router.get('/', (req, res, next) => {
-  console.log('entro aqui');
   Movie.find({})
     .then((allTheMovies) => {
       res.render('movies', { allTheMovies });
@@ -24,8 +23,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
   const { id } = req.params;
-  console.log('hello My Friend');
-  console.log(id);
+
   Movie.findById({ _id: id })
     .then((theMovie) => {
       res.render('details', theMovie);

@@ -1,16 +1,20 @@
 <div class="detail-container">
+  <div class="image-wrapper-details">
     <img src={{image}}>
+  </div>
+  <div class="text-wrapper-details">
     <a href="/movies">Go back</a>
     <h2>{{title}}</h2>
     <h3>Director: {{director}}</h3>
     <h4>Stars</h4>
     <ul>
-        {{#each stars}}
-        <li>{{this}}</li>
-        {{/each}}
+      {{#each stars}}
+      <li>{{this}}</li>
+      {{/each}}
     </ul>
     <p>{{description}}</p>
-    <p>{{#each showtimes}} 
+    <span>{{#each showtimes}}
       <span>{{this}} |</span>
-    {{/each}}</p>
+      {{/each}}</span>
+  </div>
 </div>

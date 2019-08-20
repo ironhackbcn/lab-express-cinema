@@ -67,7 +67,6 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   margin: 0 1%;
 }
 
@@ -79,6 +78,7 @@ h1 {
   justify-content: center;
   text-align: center;
 }
+
 .moviecard h4 {
   margin: 2% 0;
 }
@@ -86,9 +86,30 @@ h1 {
 .moviecard a {
   text-align: center;
   margin: 2% 0 16% 0;
-  font-size:1em;
+  font-size: 1em;
 }
 
 .detail-container {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.image-wrapper-details {
+  width: 20%;
+}
+
+.text-wrapper-details {
+  width: 40%;
+}
+
+.detail-container a {
+  font-size: 1.2em;
+  margin: 0;
+  text-decoration-line: underline;
+}
+
+.detail-container p {
+  font-weight: bolder;
 }
