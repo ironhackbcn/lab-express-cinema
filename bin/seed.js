@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const Movie = require('../models/Movie');
 
-mongoose.connect('mongodb://localhost/movies', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/cinema', { useNewUrlParser: true });
 
 const movies = [
     {
