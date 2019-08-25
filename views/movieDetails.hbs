@@ -1,6 +1,23 @@
-{{movie.title}},
-{{movie.director}},
-{{movie.stars}},
-{{movie.image}},
-{{movie.description}},
-{{movie.showtimes}}
+<div class="details">
+    <div class="image"><img src="{{movie.image}}"></div>
+    <div class="content">
+        <div><a href="javascript:window.history.back()">Go back</a></div>
+        <div class="title">{{movie.title}}</div>
+        <div class="director">Director: {{movie.director}}</div>
+        <div class="stars">
+            <p>Stars:</p>
+            <ul>
+                {{#each movie.stars}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="description">{{movie.description}}</div>
+        <div class="showtimes">
+            {{#each movie.showtimes}}
+            {{this}} |
+            {{/each}}
+        </div>
+
+    </div>
+</div>
