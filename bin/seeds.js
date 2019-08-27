@@ -4,7 +4,8 @@ const Movie = require("../models/Movie");
 mongoose.connect("mongodb://localhost/moviesLibrary", {
   useNewUrlParser: true
 });
-const movies = [
+
+var movies = [
   {
     title: "A Wrinkle in Time",
     director: "Ava DuVernay",
