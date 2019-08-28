@@ -7,13 +7,16 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index');
+const moviesRouter = require('./routes/movies');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/cinema', {
+const dbName = 'ironCinema';
+
+mongoose.connect(`mongodb://localhost/${dbName}`, {
   keepAlive: true,
   useNewUrlParser: true,
-  reconnectTries: Number.MAX_VALUE
+  reconnectTries: Number.MAX_VALUE,
 });
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/movies', moviesRouter);
 // -- 404 and error handler
 
 // NOTE: requires a views/not-found.ejs template
