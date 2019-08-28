@@ -1,8 +1,86 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* padding: 50px; */
+  margin: 0px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.homepage {
+  background-image: url('../images/cinema.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.homepage-content {
+  float: right;
+  padding: 10vh 10vw 0 0;
+}
+
+.homepage-title {
+  margin: 0px;
+  color: white;
+  font-size: 6.5em;
+  width: min-content;
+}
+
+.btn-movies {
+  margin-top: 2em;
+  padding: 1em 2em;
+  border-radius: 35px;
+  color: #4b8798;
+  font-size: 1.3em;
+}
+
+.ironCinema-title,
+.ironCinema-description {
+  margin-left: 5%;
+}
+
+.movie-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-item-container {
+  text-align: center;
+  margin: 25px 5px;
+  flex: 1 0 21%;
+}
+
+h2.movie-title {
+  font-size: 1em;
+}
+
+.movie-info-container {
+  display: flex;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+.movie-info-img {
+  margin: 1em;
+}
+
+.movie-info-data {
+  width: 45%;
+  margin-left: 2em;
+}
+
+.movie-info-stars-list {
+  padding-left: 1em;
+}
+
+p.movie-info-director {
+  font-weight: 600;
+}
+
+p.movie-info-stars {
+  font-weight: 600;
 }
