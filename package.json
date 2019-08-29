@@ -13,5 +13,20 @@
     "http-errors": "~1.6.2",
     "mongoose": "^5.4.15",
     "morgan": "~1.9.0"
-  }
+  },
+  "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanBautista/lab-express-cinema.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johanBautista/lab-express-cinema/issues"
+  },
+  "homepage": "https://github.com/johanBautista/lab-express-cinema#readme"
 }
