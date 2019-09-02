@@ -4,5 +4,77 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+  padding: 5px 0px 30px 0px;
+  display: block;
+}
+/* Principal Page */
+.contain-index {
+  background-image: url("../images/cinema.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+h1 {
+  color: white;
+  font-size: 5em;
+  padding: 100px;
+}
+h2 {
+  font-size: 2em;
+  color: #1a5f7a;
+}
+.button-movies {
+  text-decoration: none;
+  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 300;
+  font-size: 20px;
+  color: #00b7ff;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.button-movies:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+/* Movies Page */
+.movie-list {
+  background-color: #1a5f7a23;
+  padding: 20px;
+  display: flex;
+  width: fit-content;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.movie-list a {
+  width: 90%;
+  font-size: 0.7em;
+}
+.movie-title {
+  font-size: 1.5em;
+  color: #1a5f7a;
+  text-align: center;
+  margin: 20px 0px 20px 0 px;
+}
+
+/* Detail Movies */
+.movie-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.movie-image {
+  display: inline-block;
+  width: 50%;
+}
+.movie-info {
+  display: inline-block;
 }

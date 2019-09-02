@@ -2,14 +2,22 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
-const movieSchema = new Schema({
-  title: String,
-  director: String,
-  stars: [],
-  image: String,
-  description: String,
-  showtimes: []
-});
+const movieSchema = new Schema(
+  {
+    title: String,
+    director: String,
+    stars: [],
+    image: String,
+    description: String,
+    showtimes: []
+  },
+  {
+    timestamps: {
+      createdAt: "created_at",
+      updatedAt: "updated_at"
+    }
+  }
+);
 
 const Movie = mongoose.model("Movie", movieSchema);
 

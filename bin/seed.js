@@ -3,7 +3,7 @@ const Movie = require("../models/Movie");
 
 mongoose.connect("mongodb://localhost/movies", { useNewUrlParser: true });
 
-const movies = [
+var movies = [
   {
     title: "A Wrinkle in Time",
     director: "Ava DuVernay",
@@ -85,3 +85,13 @@ const movies = [
     showtimes: ["13:00", "15:30", "18:00", "20:10", "22:40"]
   }
 ];
+
+Movie.create(movies)
+  .then(movie => {
+    console.log("inserted movie ", movie);
+    mongoose.connection.close();
+  })
+  .catch(err => {
+    console.log(err);
+    mongoose.connection.close();
+  });
